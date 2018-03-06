@@ -72,6 +72,22 @@ group by dept.name
 /* 9.
 Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2 and 'Art' otherwise.
 */
+select name,
+  case when dept = 1 or dept = 2
+       then 'Sci'
+       else 'Art'
+       end
+from teacher 
 
-
+/* 10.
+Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2, show 'Art' if the teacher's dept is 3 and 'None' otherwise.
+*/
+select name,
+  case when dept = 1 or dept = 2
+       then 'Sci'
+       when dept = 3
+       then 'Art'
+       else 'None'
+       end
+from teacher 
 
